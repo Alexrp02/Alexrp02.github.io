@@ -125,8 +125,17 @@
 		}
 
 		@keyframes sizing {
-			from {font-size: 5rem;}
-			to {font-size: 7rem;}
+			from {font-size: 6.5vw;}
+			to {font-size: 8vw;}
+		}
+
+		.exp{
+			position: absolute;
+			color: white ;
+			font-size: 2rem;
+			bottom:1vh;
+			left: 50%;
+			transform:translate(-50%, 0) ;
 		}
 	</style>
 	<meta charset="utf-8">
@@ -136,8 +145,9 @@
 <body>
 
 <div class="container">
+	<div class="exp" id="exp">0 EXP</div>
 	<div id="name">PÏNWÏ</div>
-	<a href="/inventory.html">
+	<a href="./inventory.html">
 	<div id="tienda" class="button">Tienda</div>
 	<div id="menu" class="button">Menu</div>
 	<div id="juego" class="button">Juego</div>	

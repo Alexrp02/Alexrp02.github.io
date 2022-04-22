@@ -1,9 +1,18 @@
 const Tienda = document.getElementById("tienda")
 const Menu = document.getElementById("slidingmenu")
 const Pinwi = document.getElementById("pinwi")
+// const Name = document.getElementById("name")
 
-var clicked = 0;
-var pinwiclicked = 0
+// var clicked = 0
+// var pinwiclicked = 0
+var exp = 0
+
+// Name.addEventListener("animationiteration", ()=>{
+//     if (!pinwiclicked) {
+//         console.log("Iteration end!")
+//         Name.style.removeProperty("animation")
+//     }
+// })
 
 Tienda.addEventListener("click", () =>{
     console.log("tienda clicked!")
@@ -19,15 +28,17 @@ Tienda.addEventListener("click", () =>{
 Pinwi.addEventListener("click", makeTextDance) 
 
 function makeTextDance () {
-    console.log(pinwiclicked)
-    let Name = document.getElementById("name")
-    if(!pinwiclicked) {
-        Name.style.animation = "sizing 1s ease-in-out 0s infinite alternate"
-        pinwiclicked=1
-    }else{
-        Name.style.removeProperty("animation")
-        pinwiclicked=0
-    } 
+    // console.log(pinwiclicked)
+    let Exp = document.getElementById("exp")
+    exp++
+    Exp.innerHTML = exp + " EXP"
+
+    // if(!pinwiclicked) {
+    //     Name.style.animation = "sizing 1s ease-in-out 0s infinite alternate"
+    //     pinwiclicked=1
+    // }else{
+    //     pinwiclicked=0
+    // } 
         
     
     
