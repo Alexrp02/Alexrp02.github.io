@@ -40,7 +40,7 @@ function pinwiFunction () {
     let Exp = document.getElementById("exp")
     let currWidth = Pinwi.clientWidth
     console.log(currWidth)
-    if(currWidth != 600) {
+    if(currWidth <= 600) {
         Pinwi.style.width = (initWidth + exp*10) + "px"
         if(pinwiRect.y <= nameRect.y+nameRect.height){
             console.log("Collision!")
@@ -49,7 +49,6 @@ function pinwiFunction () {
     }
     console.log(nameRect.top)
 
-    
     Exp.innerHTML = exp + " EXP"
 
     // if(!pinwiclicked) {
