@@ -6,7 +6,7 @@ const Pinwi = document.getElementById("pinwi")
 // var clicked = 0
 // var pinwiclicked = 0
 var exp = 0
-
+var initWidth = Pinwi.clientWidth
 // Name.addEventListener("animationiteration", ()=>{
 //     if (!pinwiclicked) {
 //         console.log("Iteration end!")
@@ -25,12 +25,16 @@ Tienda.addEventListener("click", () =>{
 }
 }, false)
 
-Pinwi.addEventListener("click", makeTextDance) 
+Pinwi.addEventListener("click", pinwiFunction) 
 
-function makeTextDance () {
+function pinwiFunction () {
     // console.log(pinwiclicked)
-    let Exp = document.getElementById("exp")
     exp++
+    let Exp = document.getElementById("exp")
+    let currWidth = Pinwi.clientWidth
+    console.log(currWidth)
+    if(currWidth != 800) 
+        Pinwi.style.width = (initWidth + exp*10) + "px"
     Exp.innerHTML = exp + " EXP"
 
     // if(!pinwiclicked) {
